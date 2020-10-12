@@ -60,7 +60,7 @@ public class Scheduler {
      */
     private BlockingQueue<ItemGroup> runnableList = new LinkedBlockingDeque<>();
 
-    private static final ThreadLocal<StrandHolder> strandHolder = ThreadLocal.withInitial(StrandHolder::new);
+    public static final ThreadLocal<StrandHolder> strandHolder = ThreadLocal.withInitial(StrandHolder::new);
 
     private AtomicInteger totalStrands = new AtomicInteger();
 

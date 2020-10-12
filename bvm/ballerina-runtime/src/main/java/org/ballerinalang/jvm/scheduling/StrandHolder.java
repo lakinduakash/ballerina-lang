@@ -21,6 +21,6 @@ package org.ballerinalang.jvm.scheduling;
  *
  * @since 1.0.0
  */
-class StrandHolder {
-    Strand strand;
+public class StrandHolder {
+    public Strand strand;
 }

@@ -113,8 +113,11 @@ public class BallerinaHTTPConnectorListener implements HttpConnectorListener {
         }
         CallableUnitCallback callback = new HttpCallableUnitCallback(inboundMessage);
         ObjectValue service = httpResource.getParentService().getBalService();
-        Executor.submit(httpServicesRegistry.getScheduler(), service, httpResource.getName(), callback, properties,
-                        signatureParams);
+
+        MyExecutor.submit( service, httpResource.getName(), callback, properties,
+                signatureParams);
+//        Executor.submit(httpServicesRegistry.getScheduler(), service, httpResource.getName(), callback, properties,
+//                        signatureParams);
     }
 
     protected boolean accessed(HttpCarbonMessage inboundMessage) {
