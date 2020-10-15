@@ -1130,7 +1130,7 @@ public class HttpUtil {
     }
 
     public static HttpWsConnectorFactory createHttpWsConnectionFactory() {
-        return new DefaultHttpWsConnectorFactory(Runtime.getRuntime().availableProcessors() * 2*10,Runtime.getRuntime().availableProcessors() * 2*10,Runtime.getRuntime().availableProcessors() * 2);
+        return new DefaultHttpWsConnectorFactory();
     }
 
     public static void checkAndObserveHttpRequest(Strand strand, HttpCarbonMessage message) {
