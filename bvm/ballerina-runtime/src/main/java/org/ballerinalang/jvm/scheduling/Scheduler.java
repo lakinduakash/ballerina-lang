@@ -51,6 +51,7 @@ public class Scheduler {
 
 
     private PrintStream err = System.err;
+    private PrintStream console = System.out;
     /**
      * Scheduler does not get killed if the immortal value is true. Specific to services.
      */
@@ -88,6 +89,8 @@ public class Scheduler {
         }
         this.numThreads = poolSize;
         this.immortal = immortal;
+
+        console.println("Poll size: "+poolSize);
     }
 
     public Scheduler(int numThreads, boolean immortal) {
