@@ -73,7 +73,7 @@ public class Scheduler {
      */
     private final int numThreads;
 
-    private static int poolSize = Runtime.getRuntime().availableProcessors() * 2*4;
+    private static int poolSize = Runtime.getRuntime().availableProcessors() * 2;
 
     private Semaphore mainBlockSem;
 
