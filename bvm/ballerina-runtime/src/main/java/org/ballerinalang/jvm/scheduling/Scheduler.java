@@ -90,7 +90,7 @@ public class Scheduler {
         this.numThreads = poolSize;
         this.immortal = immortal;
 
-        console.println("Poll size: "+poolSize);
+        console.println("Pool size: "+poolSize);
     }
 
     public Scheduler(int numThreads, boolean immortal) {
